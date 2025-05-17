@@ -1,6 +1,5 @@
-# ✨ SemVer Validator
+# SemVer Validator
 
-![SemVer Validator Screenshot](./screenshot.png)
 *A clean, responsive SemVer validation tool*
 
 A zero-dependency JavaScript implementation for validating [Semantic Versioning (SemVer 2.0.0)](https://semver.org/) strings with a beautiful interactive interface.
