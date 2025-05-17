@@ -1,0 +1,145 @@
+:root {
+    --primary: #6c5ce7;
+    --secondary: #a29bfe;
+    --success: #00b894;
+    --error: #d63031;
+    --text: #2d3436;
+    --light: #f5f6fa;
+    --card-bg: #ffffff;
+    --input-border: #dfe6e9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text);
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.title {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid var(--input-border);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+    color: var(--text);
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+}
+
+.submit-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #5649d1;
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.result-message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.result-message.valid {
+    background-color: rgba(0, 184, 148, 0.1);
+    color: var(--success);
+    border-left: 4px solid var(--success);
+}
+
+.result-message.invalid {
+    background-color: rgba(214, 48, 49, 0.1);
+    color: var(--error);
+    border-left: 4px solid var(--error);
+}
+
+.hidden {
+    display: none;
+}
+
+.examples {
+    background-color: rgba(108, 92, 231, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary);
+}
+
+.examples h3 {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 16px;
+}
+
+.example-list {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.example-list li {
+    margin-bottom: 8px;
+    font-family: 'Courier New', monospace;
+    color: var(--text);
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.result-message {
+    animation: fadeIn 0.3s ease-out;
+}
